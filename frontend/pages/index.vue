@@ -10,7 +10,7 @@
         </p>
         <div class="actions">
           <NuxtLink to="/amenities" class="primary">View Amenities</NuxtLink>
-          <NuxtLink to="/rules" class="secondary">Read Rules</NuxtLink>
+          <NuxtLink to="/login" class="secondary">Sign In</NuxtLink>
         </div>
       </div>
       <div class="card">
@@ -22,6 +22,21 @@
         </ul>
       </div>
     </header>
+
+    <section class="grid">
+      <article class="card">
+        <h3>Guest access</h3>
+        <p>Browse amenities, pricing, and availability without logging in.</p>
+      </article>
+      <article class="card">
+        <h3>Authenticated clients</h3>
+        <p>Reserve available slots, pay via PayMongo checkout, and track your booking.</p>
+      </article>
+      <article class="card">
+        <h3>Admin approvals</h3>
+        <p>Approve long bookings, manage amenities, and review audit logs.</p>
+      </article>
+    </section>
   </main>
 </template>
 
@@ -30,6 +45,8 @@
   padding: 3rem 1.5rem;
   font-family: "Inter", system-ui, sans-serif;
   color: #0f172a;
+  display: grid;
+  gap: 2rem;
 }
 .hero {
   display: grid;
@@ -68,5 +85,10 @@
   border-radius: 1rem;
   background: #f8fafc;
   box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 }
 </style>
